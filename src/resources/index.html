@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caesar App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="home" class="screen active">
+    <h1>Caesar Cipher</h1>
+    <button onclick="show('encrypt')">Encrypt</button>
+    <button onclick="show('decrypt')">Decrypt</button>
+    <button onclick="show('credits')">Credentials</button>
+</div>
+
+<div id="encrypt" class="screen">
+    <h2>Encrypt (Shift = 3)</h2>
+    <textarea id="encInput"></textarea>
+    <button onclick="encrypt()">Encrypt</button>
+    <div id="encOutput"></div>
+    <button onclick="show('home')">Back</button>
+</div>
+
+<div id="decrypt" class="screen">
+    <h2>Decrypt (Shift = 3)</h2>
+    <textarea id="decInput"></textarea>
+    <button onclick="decrypt()">Decrypt</button>
+    <div id="decOutput"></div>
+    <button onclick="show('home')">Back</button>
+</div>
+
+<div id="credits" class="screen">
+    <h2>Developers</h2>
+    <div class="name" onclick="openModal('m7md_ali')">Mohamed Ali</div>
+    <div class="name" onclick="openModal('amr')">Amr Ali</div>
+    <div class="name" onclick="openModal('ammar')">Ammar Amir</div>
+    <div class="name" onclick="openModal('youssef')">Youssef Tarek</div>
+    <div class="name" onclick="openModal('m7md_wael')">Mohamed Wael</div>
+    <button onclick="show('home')">Back</button>
+</div>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <h3>Choose Profile</h3>
+        <button id="linkedinBtn">LinkedIn</button>
+        <button id="githubBtn">GitHub</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="bridge.js"></script>
+</body>
+</html>

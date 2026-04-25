@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    background: url("background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(120, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* layout */
+.screen {
+    display: none;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.active {
+    display: flex;
+}
+
+/* buttons */
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: rgba(255, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+#home button {
+    width: 220px;
+    font-size: 22px;
+}
+
+/* modern input boxes */
+textarea, input {
+    width: 350px;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    font-size: 16px;
+}
+
+/* output */
+p {
+    font-size: 18px;
+}
+
+/* credentials */
+.name {
+    font-size: 28px;
+    margin: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.name:hover {
+    color: #ff4d4d;
+    transform: scale(1.1);
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: rgba(30, 0, 0, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
